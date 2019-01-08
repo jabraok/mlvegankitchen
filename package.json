@@ -33,6 +33,7 @@
     "autoprefixer": "^9.4.4",
     "babel-polyfill": "^6.26.0",
     "grunt": "~0.4.0",
+    "gsap": "^2.0.2",
     "petfinder-client": "^0.0.3",
     "postcss-modules": "^1.4.1",
     "prop-types": ">=15.5.6",
