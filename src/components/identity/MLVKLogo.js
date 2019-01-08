@@ -1,6 +1,5 @@
 /** @jsx jsx */
 
-import React from "react";
 import { GREY } from "../../styles/color";
 import { jsx } from "@emotion/core";
 
