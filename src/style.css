@@ -61,5 +61,5 @@
   * @import "utilities/skew-transforms";
   */
 
-@import "./styles/typography.css";
-@import "./styles/reset.css";
+@import "./styles/typography";
+@import "./styles/reset";

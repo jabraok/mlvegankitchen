@@ -8,7 +8,7 @@
     "format:check": "prettier --list-difference \"src/**/*.{js,jsx,css,json}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel src/index.html",
+    "dev": "parcel src/index.html --hmr-hostname mlvk-socket.ngrok.io --hmr-port 80",
     "dev-clear": "rm -rf .cache && parcel src/index.html"
   },
   "author": "",
@@ -23,6 +23,7 @@
     "eslint-plugin-react": "^7.12.1",
     "parcel-bundler": "^1.11.0",
     "prettier": "^1.15.3",
+    "sass": "^1.15.3",
     "tailwindcss": "^0.7.3"
   },
   "dependencies": {
