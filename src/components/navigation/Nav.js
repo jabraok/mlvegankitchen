@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import { jsx, css } from "@emotion/core";
+import { css } from "@emotion/core";
 
 import { Link } from "@reach/router";
 import { GREY } from "../../styles/color";
 import MLVKLogo from "../identity/MLVKLogo";
-// import styled from "@emotion/styled";
 import TweenMax from "gsap";
 import MobileNav from "./MobileNav";
 
@@ -22,16 +21,6 @@ const ContainerStyles = css`
   a {
     color: inherit;
   }
-`;
-
-const MenuToggleStyles = css`
-  padding: 0.57rem 0;
-  font-size: 0.857rem;
-  letter-spacing: inherit;
-  border-top: 2px solid ${GREY};
-  border-bottom: 2px solid ${GREY};
-  text-transform: inherit;
-  z-index: 100;
 `;
 
 export default function Nav() {
@@ -71,12 +60,8 @@ export default function Nav() {
           </Link>
         </div>
 
-        {/* <MenuToggle className="block lg:hidden" onClick={handleMenuToggleClick}>
-          Menu
-        </MenuToggle> */}
         <button
-          css={MenuToggleStyles}
-          className="block lg:hidden"
+          className="block lg:hidden p-2 text-sm z-50 text-grey border-b-2 border-t-2 border-grey uppercase tracking-extra"
           onClick={handleMenuToggleClick}
         >
           Menu

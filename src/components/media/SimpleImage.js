@@ -2,7 +2,7 @@ import React from "react";
 import Imgix, { Picture, Source } from "react-imgix";
 import { BASE_URL } from "../../constants/Imgix";
 
-export default function HeroSlide({ img, sizes }) {
+export default function SimpleImage({ img, sizes = [1200, 992, 768, 576] }) {
   const commonProps = {
     src: `${BASE_URL}/${img}`,
     imgixParams: {
