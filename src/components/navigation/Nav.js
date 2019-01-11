@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
+
+import { jsx, css } from "@emotion/core";
+
 import { Link } from "@reach/router";
 import { GREY } from "../../styles/color";
 import MLVKLogo from "../identity/MLVKLogo";
-import styled from "@emotion/styled";
+// import styled from "@emotion/styled";
 import TweenMax from "gsap";
 import MobileNav from "./MobileNav";
 
@@ -12,7 +15,7 @@ const links = [
   { url: "/products", text: "Products" }
 ];
 
-const Container = styled("nav")`
+const ContainerStyles = css`
   color: ${GREY};
   text-transform: uppercase;
 
@@ -21,7 +24,7 @@ const Container = styled("nav")`
   }
 `;
 
-const MenuToggle = styled("button")`
+const MenuToggleStyles = css`
   padding: 0.57rem 0;
   font-size: 0.857rem;
   letter-spacing: inherit;
@@ -51,7 +54,7 @@ export default function Nav() {
   );
 
   return (
-    <Container className="flex flex-col absolute w-full">
+    <nav css={ContainerStyles} className="flex flex-col absolute w-full">
       <div className="flex w-full items-center justify-between px-5 lg:px-20 py-5">
         <Link to="/" className="">
           <MLVKLogo size={150} />
@@ -68,14 +71,21 @@ export default function Nav() {
           </Link>
         </div>
 
-        <MenuToggle className="block lg:hidden" onClick={handleMenuToggleClick}>
+        {/* <MenuToggle className="block lg:hidden" onClick={handleMenuToggleClick}>
           Menu
-        </MenuToggle>
+        </MenuToggle> */}
+        <button
+          css={MenuToggleStyles}
+          className="block lg:hidden"
+          onClick={handleMenuToggleClick}
+        >
+          Menu
+        </button>
       </div>
 
       <div ref={menuRef} className="opacity-0">
         <MobileNav links={links} />
       </div>
-    </Container>
+    </nav>
   );
 }
